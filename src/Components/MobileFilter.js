@@ -9,7 +9,7 @@ const Wrapper = styled(Fab)`
   position: fixed !important;
   bottom: 18px;
   right: 18px;
-  background-color: #3971cf !important;
+  background-color: #3f51b5 !important;
 `
 
 const MobileFilter = () => {

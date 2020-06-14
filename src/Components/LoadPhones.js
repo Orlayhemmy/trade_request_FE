@@ -10,7 +10,7 @@ const Wrapper = styled(Fab)`
   position: fixed !important;
   bottom: 18px;
   left: 18px;
-  background-color: #3971cf !important;
+  background-color: #3f51b5 !important;
 `
 
 const LoadPhones = () => {

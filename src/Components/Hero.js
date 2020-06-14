@@ -12,7 +12,7 @@ const HeroWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #2f6cccf5;
+  color: #3f51b5;
   margin: 0 auto;
   @media only screen and (max-width: 580px) {
     background-image: url(${HeroBG});

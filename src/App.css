@@ -74,11 +74,11 @@ body {
 }
 
 .MuiButton-containedPrimary, .MuiAlert-standardSuccess {
-  background-color: #3972cf !important;
+  background-color: #3f51b5 !important;
 }
 
 .MuiCircularProgress-colorPrimary {
-  color: #3972cf !important;
+  color: #3f51b5 !important;
 }
 
 .MuiAlert-standardSuccess, .MuiAlert-icon {

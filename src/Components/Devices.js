@@ -123,7 +123,7 @@ const DeviceDescription = styled.div`
 `
 
 const ActionButton = styled(Button)`
-  background-color: #3972cf !important;
+  background-color: #3f51b5 !important;
   padding: 6px 24px !important;
   margin: 8px !important;
   font-size: 14px !important;

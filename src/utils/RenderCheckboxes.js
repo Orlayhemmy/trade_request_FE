@@ -15,7 +15,7 @@ const Wrapper = styled(FormGroup)`
   .MuiSvgIcon-root {
     width: 18px;
     height: 18px;
-    fill: #3972CF;
+    fill: #3f51b5;
   }
 `
 
