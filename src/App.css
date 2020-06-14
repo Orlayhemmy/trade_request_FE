@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #fdfdfd;
+  margin: 0px 100px;
 }
 
 .App-logo {
@@ -13,15 +15,19 @@
   }
 }
 
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+}
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-image: url('./assets/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: contain
 }
 
 .App-link {
@@ -34,5 +40,84 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.container-body {
+  display: flex;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.MuiBox-root > p, .MuiFormControlLabel-root > span {
+  font-size: 14px;
+}
+
+.body-content {
+  flex: 4;
+  margin-left: 32px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.MuiPaginationItem-root {
+  color: #9c9696 !important;
+}
+
+.MuiPagination-root {
+  margin: 0 auto;
+}
+
+.loader {
+  position: absolute;
+}
+
+.MuiButton-containedPrimary, .MuiAlert-standardSuccess {
+  background-color: #3972cf !important;
+}
+
+.MuiCircularProgress-colorPrimary {
+  color: #3972cf !important;
+}
+
+.MuiAlert-standardSuccess, .MuiAlert-icon {
+  color: #ffffff !important;
+}
+
+.MuiOutlinedInput-input {
+  height: 12px !important;
+}
+
+@media only screen and (max-width: 920px) {
+  .App {
+    margin: 0 50px;
+  }
+
+  .body-content {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .App {
+    margin: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .App {
+    margin: 0 5px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .App {
+    margin: 0 150px;
+  }
+}
+@media only screen and (min-width: 1720px) {
+  .App {
+    margin: 0 200px;
   }
 }
