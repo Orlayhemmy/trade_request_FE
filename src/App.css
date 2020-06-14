@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-color: #fdfdfd;
-  margin: 0px 100px;
+  margin: 0px 70px;
 }
 
 .App-logo {
@@ -113,7 +113,7 @@ body {
 
 @media only screen and (min-width: 1280px) {
   .App {
-    margin: 0 150px;
+    margin: 0 70px;
   }
 }
 @media only screen and (min-width: 1720px) {

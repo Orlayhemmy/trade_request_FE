@@ -26,15 +26,15 @@ const DeviceWrapper = styled.div`
   grid-template-columns: repeat(1, 1fr);
   column-gap: 18px;
 
-  @media only screen and (min-width: 380px) {
+  @media only screen and (min-width: 520px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media only screen and (min-width: 720px) {
+  @media only screen and (min-width: 960px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1240px) {
     grid-template-columns: repeat(4, 1fr);
   }
   @media only screen and (min-width: 1720px) {
