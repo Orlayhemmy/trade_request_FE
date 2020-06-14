@@ -71,7 +71,7 @@ const App = () => {
         {matches && <SideDrawer />}
         <LoadPhones />
         {matches && <MobileFilter />}
-        {Object.keys(messageInfo).length && <AlertComponent {...messageInfo} />}
+        {Object.keys(messageInfo).length & <AlertComponent {...messageInfo} />}
       </div>
     </AppContext.Provider>
   )

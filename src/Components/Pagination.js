@@ -17,9 +17,15 @@ const PaginationComponent = () => {
     fetchData({ page: value, tradeType: currentTradeType })
   }
 
-  return (
-    <PaginationWrapper count={ totalPages } variant="outlined" color="primary"  page={ page } onChange={ handleChange } />
-  )
+  return totalPages
+    ? (<PaginationWrapper
+        count={totalPages || 0}
+        variant="outlined"
+        color="primary"
+        page={page}
+        onChange={handleChange}
+      />)
+    : null
 }
 
 export default PaginationComponent

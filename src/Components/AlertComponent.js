@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {makeStyles} from '@material-ui/core/styles'
-import {Alert, AlertTitle} from '@material-ui/lab'
+import { Alert } from '@material-ui/lab'
 
 const StyledAlert = styled(Alert)`
   position: fixed;
@@ -10,7 +9,7 @@ const StyledAlert = styled(Alert)`
   border-radius: 1px !important;
 `
 
-const AlertComponent = ({message, status}) => (
+const AlertComponent = ({ message, status }) => (
   <StyledAlert severity={'success' || status} >
     {message}
   </StyledAlert>

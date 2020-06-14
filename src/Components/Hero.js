@@ -1,4 +1,4 @@
-import React, {useContext, Fragment} from 'react'
+import React, { useContext, Fragment } from 'react'
 import styled from 'styled-components'
 import Button from '@material-ui/core/Button'
 import AppContext from '../utils/context'
@@ -73,10 +73,22 @@ const RequestSection = styled.div`
       font-size: 12px;
     }
   }
+
+  .MuiButton-label {
+    font-weight: 600;
+  }
+
+  .MuiButton-outlinedPrimary {
+    background-color: #ffffff;
+
+    @media only screen and (min-width: 768px) {
+      background-color: transparent;
+    }
+  }
 `
 
 const Hero = () => {
-  const {tradeTypeRequest, currentTradeType} = useContext(AppContext)
+  const { tradeTypeRequest, currentTradeType } = useContext(AppContext)
   const matches = useMediaQuery('(max-width:580px)')
   
   return (
@@ -92,10 +104,14 @@ const Hero = () => {
         {!matches && <div><img src={ HeroBG } /></div>}
       </HeroTop>
       <RequestSection>
-        <Button variant={ currentTradeType === 'buy' ? 'contained' : 'outlined' } color="primary" onClick={ () => tradeTypeRequest('buy') }>
+        <Button variant={currentTradeType === 'buy' ? 'contained' : 'outlined'}
+          color="primary" onClick={() => tradeTypeRequest('buy')}
+        >
           Buy Requests
         </Button>
-        <Button variant={ currentTradeType === 'buy' ? 'outlined' : 'contained' } color="primary"  onClick={ () => tradeTypeRequest('sell') }>
+        <Button variant={currentTradeType === 'buy' ? 'outlined' : 'contained'}
+        color="primary"  onClick={() => tradeTypeRequest('sell')}
+        >
           Sell Requests
         </Button>
       </RequestSection>

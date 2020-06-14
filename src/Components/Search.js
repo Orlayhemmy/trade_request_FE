@@ -1,4 +1,4 @@
-import React, { useContext, useState} from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
@@ -24,6 +24,12 @@ const FormWrapper = styled.div`
     outline: red auto 1px !important;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    .MuiOutlinedInput-input {
+      background: #ffffff;
+    }
+  }
 `
 
 const Search = () => {
@@ -39,8 +45,13 @@ const Search = () => {
 
   return (
     <FormWrapper>
-      <TextField id="outlined-basic" label="iPhone 8 Plus, 256gb, A1" variant="outlined" value={ searchText } onChange={ (event) => updateSearchText(event.target.value) }/>
-      <Button variant="contained" color="primary" onClick={ () => searchIPhoneRequest() }>
+      <TextField id="outlined-basic" label="iPhone 8 Plus, 256gb, A1"
+        variant="outlined"
+        value={searchText}
+        onChange={ (event) => updateSearchText(event.target.value) }
+      />
+      <Button variant="contained" color="primary"
+        onClick={ () => searchIPhoneRequest() }>
         Search
       </Button>
     </FormWrapper>

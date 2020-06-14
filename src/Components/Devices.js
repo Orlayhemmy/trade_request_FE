@@ -133,7 +133,8 @@ const ActionButton = styled(Button)`
   }
 `
 
-const getIPhoneImage = (model) => phoneImages.find(img => img.id === model || {}).src
+const getIPhoneImage = (model) => 
+  phoneImages.find(img => img.id === model || {}).src
 
 export const Devices = ({ devices = [], loading }) => (
   <DeviceOuterWrapper>

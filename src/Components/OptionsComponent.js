@@ -23,6 +23,7 @@ const Wrapper = styled.div`
 
   span {
     font-size: 18px;
+    text-transform: capitalize;
 
     @media only screen and (min-width: 768px) {
       font-size: 14px;
@@ -37,7 +38,6 @@ const Wrapper = styled.div`
 
 const OptionsComponent = () => (
   <Wrapper>
-    {/* <LoadPhones /> */}
     <h4>Filter by</h4>
     <NameFilter />
     <PriceFilter />
