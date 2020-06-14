@@ -11,7 +11,12 @@ const NameFilter = () => {
   return (
     <Box>
       <RenderCheckboxes
-        values={['iPhone 11', 'iPhone X']} 
+        values={[
+          'iPhone XS Max', 'iPhone XS', 'iPhone XR', 'iPhone X',
+          'iPhone 8 PLUS', 'iPhone 8', 'iPhone 7 PLUS', 'iPhone 7',
+          'iPhone 6S Plus', 'iPhone 6S', 'iPhone 6 Plus', 'iPhone 6',
+          'iPhone SE'
+        ]} 
         title={'Model'} 
         handleFilter={ filterByModel }
         />

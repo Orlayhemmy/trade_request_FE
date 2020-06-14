@@ -1,10 +1,24 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Trade Request Frontend
+This app uses the data from an [api](https://github.com/Orlayhemmy/trade_requests_BE) to populate its view. It displays a list of iPhones which can be filtered through and searched.
+
+## Features
+- Load data from a csv file on button click
+- Fetch and display the phones loaded into users view
+- Provides filter options like phone model, grade, storage size and price
+- Provides pagination of data
+
+## Limitations
+Due to time constraint, some nice to have features where not added
+- Fetching filter options from backend
+- Inculcating pagination with active filter options
+- Test
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn start:dev`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
