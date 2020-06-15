@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Search from './Search'
-import HeroBG from '../assets/hero_background.jpg'
+import HeroBG from '../images/hero_background.jpg'
 
 const HeroWrapper = styled.div`
   height: 500px;

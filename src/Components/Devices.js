@@ -142,9 +142,6 @@ const ActionButton = styled(Button)`
   }
 `
 
-const getIPhoneImage = (model) => 
-  phoneImages.find(img => img.id === model || {}).src
-
 export const Devices = ({ devices = [], loading }) => (
   <DeviceOuterWrapper>
     {loading && (
@@ -156,7 +153,7 @@ export const Devices = ({ devices = [], loading }) => (
       {devices.map((iPhone) => (
         <DeviceContainer key={iPhone._id}>
           <DeviceImage>
-            <img src={getIPhoneImage(iPhone.name)} />
+            <img src={phoneImages[iPhone.name]} />
             <Button>{iPhone.grade}</Button>
           </DeviceImage>
           <DeviceDescription>
@@ -168,7 +165,8 @@ export const Devices = ({ devices = [], loading }) => (
           </DeviceDescription>
           <ActionButton>{iPhone.trade_type}</ActionButton>
         </DeviceContainer>
-      ))}
+        )
+      )}
     </DeviceWrapper>
     <PaginationComponent />
   </DeviceOuterWrapper>
