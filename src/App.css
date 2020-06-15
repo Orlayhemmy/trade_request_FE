@@ -1,7 +1,6 @@
 .App {
   text-align: center;
-  background-color: #fdfdfd;
-  margin: 0px 70px;
+  padding: 0 66px;
 }
 
 .App-logo {
@@ -17,6 +16,7 @@
 
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+  background-color: #e7ecf596;
 }
 .App-header {
   height: 100vh;
@@ -46,7 +46,6 @@ body {
 .container-body {
   display: flex;
   margin: 0 auto;
-  padding: 32px 0;
 }
 
 .MuiBox-root > p, .MuiFormControlLabel-root > span {
@@ -90,34 +89,26 @@ body {
 }
 
 @media only screen and (max-width: 920px) {
-  .App {
-    margin: 0 50px;
-  }
-
   .body-content {
     margin-left: 0;
+    padding: 0 5px;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 720px) {
   .App {
-    margin: 0 20px;
+    padding: 0;
   }
 }
 
 @media only screen and (max-width: 380px) {
-  .App {
-    margin: 0 5px;
-  }
 }
 
 @media only screen and (min-width: 1280px) {
-  .App {
-    margin: 0 70px;
-  }
 }
+
 @media only screen and (min-width: 1720px) {
-  .App {
-    margin: 0 200px;
+  .container-body {
+    margin: 0 100px;
   }
 }

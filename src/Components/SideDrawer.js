@@ -11,7 +11,7 @@ const StyledDrawer = styled(Drawer)`
 `
 
 const SideDrawer = () => {
-  const {showDrawer, toggleDrawer} = useContext(AppContext)
+  const { showDrawer, toggleDrawer } = useContext(AppContext)
 
   const list = () => (
     <OptionsComponent />
@@ -19,10 +19,12 @@ const SideDrawer = () => {
 
   return (
     <div>
-      <StyledDrawer anchor={ 'right' } open={ showDrawer } onClose={ toggleDrawer(false) }>
+      <StyledDrawer
+        anchor={'right'}
+        open={showDrawer}
+        onClose={ toggleDrawer(false)}>
         {list()}
       </StyledDrawer>
-      ))}
     </div>
   )
 }

@@ -24,30 +24,38 @@ const DeviceOverlay = styled.div`
 const DeviceWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  column-gap: 18px;
+  column-gap: 12px;
 
-  @media only screen and (min-width: 520px) {
+  @media only screen and (min-width: 350px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media only screen and (min-width: 960px) {
+  @media only screen and (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
   @media only screen and (min-width: 1240px) {
     grid-template-columns: repeat(4, 1fr);
   }
-  @media only screen and (min-width: 1720px) {
+
+  @media only screen and (min-width: 1240px) {
     grid-template-columns: repeat(5, 1fr);
+  }
+  
+  @media only screen and (min-width: 1720px) {
+    grid-template-columns: repeat(6, 1fr);
   }
 `
 
 const DeviceContainer = styled.div`
-  background-color: #8ca4c7b3;
+  background-color: #ffffff;
   padding: 10px;
-  color: #ffffff;
-  margin-bottom: 48px;
-  box-shadow: 5px 8px 13px #cccccc;
+  margin-bottom: 12px;
+  border-radius: 3px;
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 48px;
+  }
 
   button {
     color: white;
@@ -59,7 +67,7 @@ const DeviceImage = styled.div`
   justify-content: center;
 
   img {
-    height: 250px;
+    height: 100px;
 
     @media only screen and (min-width: 768px) {
       height: 180px;
@@ -98,6 +106,7 @@ const DeviceDescription = styled.div`
 
   .device-name {
     font-weight: 500;
+    text-transform: uppercase;
   }
 
   .device-price {

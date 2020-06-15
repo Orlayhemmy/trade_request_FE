@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 import AppContext from '../utils/context'
 import { loadIPhonesRequests } from '../api'
 import Fab from '@material-ui/core/Fab'
@@ -16,6 +16,10 @@ const Wrapper = styled(Fab)`
 const LoadPhones = () => {
   const { updateMessageInfo } = useContext(AppContext)
   const loadPhones = async () => {
+    updateMessageInfo({ 
+      message: 'Loading Phones',
+      status: 'info'
+    })
     const response = await loadIPhonesRequests()
     updateMessageInfo({ 
       message: response.data.message,

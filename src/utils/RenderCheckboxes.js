@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Checkbox from '@material-ui/core/Checkbox'
 import FormGroup from '@material-ui/core/FormGroup'
@@ -19,16 +19,16 @@ const Wrapper = styled(FormGroup)`
   }
 `
 
-const RenderCheckboxes = ({values, title, handleFilter}) => {
+const RenderCheckboxes = ({ values, title, handleFilter }) => {
   const objState = values.reduce((a,b)=> (a[ b.replace(/\s/g, '') ]=false,a),{})
   const [state, setChecked] = useState(objState)
   const handleChange = (event) => {
-    const newState = {...state, [ event.target.name ]: event.target.checked}
+    const newState = { ...state, [ event.target.name ]: event.target.checked }
     const arr = []
     setChecked(newState)
     Object.keys(newState).forEach(function(data) {
-      if (!newState[data]) {
-        delete newState[data]
+      if (!newState[ data ]) {
+        delete newState[ data ]
       } else {
         values.forEach(value => {
           if (value.replace(/\s/g, '') ===  data) arr.push(value.toLowerCase())
@@ -43,7 +43,8 @@ const RenderCheckboxes = ({values, title, handleFilter}) => {
       <p>{title}</p>
       {values.map(value => (
         <FormControlLabel
-          control={ <Checkbox checked={ state[ value.replace(/\s/g, '') ] } onChange={ handleChange } name={ value.replace(/\s/g, '') } /> }
+          control={ <Checkbox checked={ state[ value.replace(/\s/g, '') ] }
+          onChange={ handleChange } name={ value.replace(/\s/g, '') } /> }
           label={ value }
         />
       ))}

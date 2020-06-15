@@ -7,14 +7,36 @@ import { getIPhonesRequests } from '../api'
 
 const FormWrapper = styled.div`
   display: flex;
+  width: 50%;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media only screen and (max-width: 350px) {
+    display: block;
+    width: 90%;
+
+    button {
+      margin-top: 8px;
+    }
+  }
 
   .MuiFormControl-root {
     width: 80%;
     margin-right: 8px;
   }
 
+  .MuiOutlinedInput-input {
+    background-color: #ffffff !important;
+  }
+
   .MuiButton-containedPrimary {
     height: 48px;
+    background-color: #ffffff !important;
+    color: #3f51b5;
+    border-radius: 5px;
   }
 
   MuiInputBase-root MuiOutlinedInput-root Mui-focused,
@@ -48,10 +70,10 @@ const Search = () => {
       <TextField id="outlined-basic" label="iPhone 8 Plus, 256gb, A1"
         variant="outlined"
         value={searchText}
-        onChange={ (event) => updateSearchText(event.target.value) }
+        onChange={(event) => updateSearchText(event.target.value)}
       />
       <Button variant="contained" color="primary"
-        onClick={ () => searchIPhoneRequest() }>
+        onClick={() => searchIPhoneRequest()}>
         Search
       </Button>
     </FormWrapper>
