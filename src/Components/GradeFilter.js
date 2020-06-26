@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Box from '@material-ui/core/Box'
-import RenderCheckboxes from '../utils/RenderCheckboxes'
+import Checkboxes from '../utils/Checkboxes'
 import AppContext from '../utils/context'
 
 const GradeFilter = () => {
@@ -10,7 +10,7 @@ const GradeFilter = () => {
   }
   return (
     <Box>
-      <RenderCheckboxes 
+      <Checkboxes 
         values={['A1', 'B1', 'A2', 'B2', 'C', 'C/B', 'C/D', 'new']}
         title={ 'Grade' }
         handleFilter={ filterByGrade }

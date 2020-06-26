@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import Drawer from '@material-ui/core/Drawer'
+import styled from 'styled-components'
 import OptionsComponent from './OptionsComponent'
 import AppContext from '../utils/context'
-import styled from 'styled-components'
 
 const StyledDrawer = styled(Drawer)`
   > div {

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Box from '@material-ui/core/Box'
-import RenderCheckboxes from '../utils/RenderCheckboxes'
+import Checkboxes from '../utils/Checkboxes'
 import AppContext from '../utils/context'
 
 const NameFilter = () => {
@@ -10,7 +10,7 @@ const NameFilter = () => {
   }
   return (
     <Box>
-      <RenderCheckboxes
+      <Checkboxes
         values={[
           'iPhone XS Max', 'iPhone XS', 'iPhone XR', 'iPhone X',
           'iPhone 8 PLUS', 'iPhone 8', 'iPhone 7 PLUS', 'iPhone 7',

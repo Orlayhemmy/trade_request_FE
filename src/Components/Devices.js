@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Button from '@material-ui/core/Button'
+import CircularProgress from '@material-ui/core/CircularProgress'
+import PropTypes from 'prop-types'
 import { phoneImages } from '../utils/phoneImages'
 import PaginationComponent from './Pagination'
-import CircularProgress from '@material-ui/core/CircularProgress'
 
 const DeviceOuterWrapper = styled.div`
   display: block;
@@ -11,14 +12,15 @@ const DeviceOuterWrapper = styled.div`
 `
 
 const DeviceOverlay = styled.div`
-  background: #dedcdc80;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  background: #dedcdcd6;
+  position: fixed;
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  left: 50%;
+  display: block;
 `
 
 const DeviceWrapper = styled.div`
@@ -142,10 +144,11 @@ const ActionButton = styled(Button)`
   }
 `
 
-export const Devices = ({ devices = [], loading }) => (
+const Devices = ({ devices = [], loading }) => (
   <DeviceOuterWrapper>
     {loading && (
       <DeviceOverlay>
+        <p>Loading Phones</p>
         <CircularProgress />
       </DeviceOverlay>
     )}
@@ -153,7 +156,7 @@ export const Devices = ({ devices = [], loading }) => (
       {devices.map((iPhone) => (
         <DeviceContainer key={iPhone._id}>
           <DeviceImage>
-            <img src={phoneImages[iPhone.name]} />
+            <img src={phoneImages[ iPhone.name ]} />
             <Button>{iPhone.grade}</Button>
           </DeviceImage>
           <DeviceDescription>
@@ -171,3 +174,10 @@ export const Devices = ({ devices = [], loading }) => (
     <PaginationComponent />
   </DeviceOuterWrapper>
 )
+
+Devices.propTypes = {
+  devices: PropTypes.array,
+  loading: PropTypes.bool
+}
+
+export default Devices

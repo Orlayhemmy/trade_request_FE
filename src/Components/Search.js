@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import AppContext from '../utils/context'
-import { getIPhonesRequests } from '../api'
+import { getIPhonesRequests } from '../utils/api'
 
 const FormWrapper = styled.div`
   display: flex;
@@ -55,14 +55,18 @@ const FormWrapper = styled.div`
 `
 
 const Search = () => {
-  const { updateIphonesRequests, updatePageMeta } = useContext(AppContext)
+  const {
+    updateIphonesRequests, updatePageMeta, setLoading
+  } = useContext(AppContext)
   const [searchText, updateSearchText] = useState('')
   const searchIPhoneRequest = async () => {
     if (!searchText) return
 
+    setLoading(true)
     const response = await getIPhonesRequests({ searchText, tradeType: '' })
     updateIphonesRequests(response.phone_requests)
     updatePageMeta(response.meta)
+    setLoading(true)
   }
 
   return (

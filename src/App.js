@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import './App.css'
-import { getIPhonesRequests } from './api'
-import { Devices } from './Components/Devices'
+import { getIPhonesRequests } from './utils/api'
+import Devices from './Components/Devices'
 import OptionsComponent from './Components/OptionsComponent'
 import AppContext from './utils/context'
 import AlertComponent from './Components/AlertComponent'
 import Hero from './Components/Hero'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
 import MobileFilter from './Components/MobileFilter'
 import SideDrawer from './Components/SideDrawer'
 import LoadPhones from './Components/LoadPhones'
 import TradeTypeContainer from './Components/TradeTypeContainer'
+import Footer from './Components/Footer'
 
 const App = () => {
   const [iPhones, updateIphonesRequests] = useState([])
@@ -59,7 +60,8 @@ const App = () => {
         currentTradeType,
         tradeTypeRequest,
         toggleDrawer,
-        showDrawer
+        showDrawer,
+        setLoading
       }}
     >
       <div className="App">
@@ -74,8 +76,11 @@ const App = () => {
         {matches && <SideDrawer />}
         <LoadPhones />
         {matches && <MobileFilter />}
-        {Object.keys(messageInfo).length && <AlertComponent {...messageInfo} />}
+        {Boolean(Object.keys(messageInfo).length)
+          && <AlertComponent {...messageInfo} />
+        }
       </div>
+      <Footer />
     </AppContext.Provider>
   )
 }

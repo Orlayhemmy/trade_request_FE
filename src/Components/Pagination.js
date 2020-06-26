@@ -6,6 +6,14 @@ import styled from 'styled-components'
 const PaginationWrapper = styled(Pagination)`
   display: flex;
   justify-content: center;
+  margin: 20px 0 50px;
+
+  @media only screen and (max-width: 350px) {
+    .MuiPaginationItem-root {
+      margin: 0;
+      padding: 0;
+    }
+  }
 `
 
 const PaginationComponent = () => {

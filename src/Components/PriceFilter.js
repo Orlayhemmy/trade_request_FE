@@ -1,10 +1,10 @@
+/* eslint-disable computed-property-spacing */
 import React, { useState, useContext } from 'react'
 import styled from 'styled-components'
 import Slider from '@material-ui/core/Slider'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import AppContext from '../utils/context'
-import Box from '@material-ui/core/Box'
 
 const Wrapper = styled.div`
   border-top: 1px solid #e8e4e4;
@@ -35,13 +35,13 @@ const Wrapper = styled.div`
 
 const PriceFilter = () => {
   const [value, setValue] = useState([20, 2000])
-  const {fetchData} = useContext(AppContext)
+  const { fetchData } = useContext(AppContext)
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
   }
 
-  const handleInputChange = ({ target: { value: data }}, position) => {
+  const handleInputChange = ({ target: { value: data } }, position) => {
     position === 'min'
       ? setValue([data, value[1]])
       : setValue([value[0], data])
@@ -62,9 +62,27 @@ const PriceFilter = () => {
         max={2000}
         min={20}
       />
-      <TextField id="outlined-basic" label="Min" variant="outlined" value={ value[0] } onChange={(event) => handleInputChange(event, 'min')}/>
-      <TextField id="outlined-basic" label="Max" variant="outlined" value={ value[1] } onChange={(event) => handleInputChange(event, 'max')}/>
-      <Button variant="contained" color="primary" onClick={filterByPrice}>Submit</Button>
+      <TextField
+        id="outlined-basic"
+        label="Min"
+        variant="outlined"
+        value={ value[0] }
+        onChange={(event) => handleInputChange(event, 'min')}
+      />
+      <TextField
+        id="outlined-basic"
+        label="Max"
+        variant="outlined"
+        value={ value[1] }
+        onChange={(event) => handleInputChange(event, 'max')}
+        />
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={filterByPrice}
+      >
+        Submit
+      </Button>
     </Wrapper>
   )
 }
