@@ -1,6 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 # Trade Request Frontend
-This app uses the data from an [api](https://github.com/Orlayhemmy/trade_requests_BE) to populate its view. It displays a list of iPhones which can be filtered through and searched.
+https://trade-requests-frontend.herokuapp.com/
+This app uses the data from an [api](https://github.com/Orlayhemmy/trade_requests_BE) to populate its view. It displays a list of iPhones which can be filtered through and searched
 
 ## Features
 - Load data from a csv file on button click
